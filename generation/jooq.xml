@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.11.0.xsd">
+    <logging>INFO</logging>
+    <jdbc>
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/logs</url>
+        <user>logs</user>
+        <password>password</password>
+    </jdbc>
+    <generator>
+        <name>org.jooq.codegen.JavaGenerator</name>
+        <database>
+            <name>org.jooq.meta.mysql.MySQLDatabase</name>
+            <inputSchema>logs</inputSchema>
+            <includes>.*</includes>
+            <excludes></excludes>
+        </database>
+        <generate>
+            <daos>true</daos>
+        </generate>
+        <target>
+            <!-- The destination package of your generated classes (within the destination directory) -->
+            <packageName>com.ef.generated</packageName>
+            <!-- The destination directory of your generated classes. Using Maven directory layout here -->
+            <directory>/Users/tim/wallethub/src/main/java</directory>
+        </target>
+    </generator>
+</configuration>
